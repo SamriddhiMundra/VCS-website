@@ -35,7 +35,7 @@ export default async function Home() {
     <div className="w-full bg-transparent">
       {/* Hero Section */}
       <section
-        className="min-h-[90vh] bg-cover bg-center bg-fixed relative"
+        className="min-h-[90vh] bg-cover bg-center bg-fixed relative pt-10"
         style={{ backgroundImage: "url('/new-bg.jpeg')" }}
       >
         {/* Overlay with Gradient */}
@@ -81,6 +81,7 @@ export default async function Home() {
                   Why E-Cell IIT BHU?
                 </CardTitle>
               </CardHeader>
+              
               <CardContent className="p-0">
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start gap-3">
@@ -104,7 +105,7 @@ export default async function Home() {
 
     
 
-      <section className="max-w-6xl mx-auto px-4 md:px-6 py-6 md:py-8">
+      <section className="max-w-6xl mx-auto px-4 md:px-6 py-6 md:py-8 pb-40 md:pb-40">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-cyan-200 via-blue-200 to-blue-100 bg-clip-text text-transparent border-b-2 border-blue-500/50 pb-4 inline-block">
           Popular Courses
         </h2>
@@ -115,14 +116,11 @@ export default async function Home() {
               key={c.id}
               className="bg-zinc-900/80 backdrop-blur-md p-6 md:p-8 hover:border-blue-400/50 transition-all duration-300 group"
             >
-              <CardHeader className="p-0 mb-3">
-                <CardTitle className="uppercase text-lg font-bold tracking-wider relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-cyan-300 via-blue-400 to-yellow-200 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
-                    {c.title}
-                  </span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-500/20 to-purple-600/20 blur-xl animate-pulse" />
-                </CardTitle>
-              </CardHeader>
+             <CardHeader className="p-0 mb-3">
+  <CardTitle className="uppercase text-lg font-bold tracking-wider">
+    {c.title}
+  </CardTitle>
+</CardHeader>
               <CardDescription className="mb-4 text-sm">
                 {c.short}
               </CardDescription>
