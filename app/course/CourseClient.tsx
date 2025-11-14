@@ -125,17 +125,16 @@ const CourseClient: React.FC<CourseClientProps> = ({ status }) => {
                 {/* Right: Hero Text */}
                 <div className="relative z-10 w-full text-center lg:text-right max-w-3xl">
                     <div className="space-y-6">
-                        <div className="text-sm text-orange-400 font-medium tracking-wider">IIT BHU's Summer Course for VC and Start Up</div>
+                        <div className="text-sm text-orange-400 font-medium tracking-wider">IIT BHU's winter Course for VC</div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                             The perfect start
                             <br />
-                            <span className="text-orange-500">for your Start Up journey.</span>
+                            <span className="text-orange-500">for your VC journey.</span>
                         </h1>
 
                         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto lg:ml-auto">
-                            The summer course on VC and  Start Up offers a comprehensive blend of resources — engaging videos, blogs, assignments, and a
-                            final hackathon!
+                          The winter course on VC and Start Up offers a comprehensive blend of resources — engaging videos, blogs, assignments, and a final hackathon!
                         </p>
 
                         <div className="flex flex-wrap gap-4 justify-center lg:justify-end pt-4">
