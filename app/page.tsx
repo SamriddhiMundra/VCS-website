@@ -164,7 +164,7 @@ export default async function Home() {
           {partners.map((partner) => (
             <Card
               key={partner.id}
-              className="bg-zinc-900/80 backdrop-blur-md p-8 md:p-10 hover:border-blue-400/50 transition-all duration-300 group hover:shadow-lg hover:shadow-blue-500/20"
+              className="bg-zinc-900/80 backdrop-blur-md p-6 md:p-7 hover:border-blue-400/50 transition-all duration-300 group hover:shadow-lg hover:shadow-blue-500/20"
             >
               <CardContent className="p-0 flex flex-col items-center text-center space-y-4">
                 {/* Logo Container with Glassmorphism Effect */}
