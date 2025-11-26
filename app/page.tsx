@@ -41,6 +41,7 @@ export default async function Home() {
         {/* Overlay with Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60"></div>
 
+
         <div className="relative max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10 space-y-8">
           {/* Main Hero Content */}
           <section className="grid md:grid-cols-2 gap-10 items-center">
@@ -137,7 +138,9 @@ export default async function Home() {
                 </Link>
               </CardFooter>
             </Card>
+
           ))} 
+
         </div>
       </section>
     </div>
