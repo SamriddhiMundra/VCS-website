@@ -137,7 +137,7 @@ export default async function Home() {
                 </Link>
               </CardFooter>
             </Card>
-          ))}
+          ))} 
         </div>
       </section>
     </div>
