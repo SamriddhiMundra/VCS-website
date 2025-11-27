@@ -35,14 +35,12 @@ const partners = [
   {
     id: 1,
     name: "247 VC",
-    logo: "247vclogo.png", 
-   
+    logo: "247vclogo.png",
   },
   {
     id: 2,
     name: "BVC",
-    logo: "BVClogo.png", 
-    
+    logo: "BVClogo.png",
   },
 ];
 
@@ -51,7 +49,7 @@ export default async function Home() {
     <div className="w-full bg-transparent">
       {/* Hero Section */}
       <section
-        className="min-h-[90vh] bg-cover bg-center bg-fixed relative pt-10"
+        className="min-h-[45vh] bg-cover bg-center bg-fixed relative pt-10"
         style={{ backgroundImage: "url('/new-bg.jpeg')" }}
       >
         {/* Overlay with Gradient */}
@@ -66,16 +64,15 @@ export default async function Home() {
                   Empowering
                 </span>
                 <span className="block text-5xl md:text-6xl font-extrabold gradient-text leading-tight">
-                  Innovators
+                  Venture Capitalists
                 </span>
                 <span className="block text-5xl md:text-6xl font-extrabold text-white leading-tight">
                   of Tomorrow
                 </span>
               </h1>
               <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-                E-Cell IIT BHU nurtures entrepreneurial spirit by organizing
-                bootcamps, workshops, and courses designed to help students turn
-                their ideas into impactful startups.
+                VC Scout develops future VC talent with practical training and
+                real deal-flow exposure for career-ready investing skills.
               </p>
 
               <div className="flex gap-4 flex-wrap pt-4">
@@ -86,7 +83,7 @@ export default async function Home() {
 
                 {/* Outline style button */}
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/course">Explore Courses</Link>
+                  <Link href="/course">Explore Course</Link>
                 </Button>
               </div>
             </div>
@@ -94,7 +91,7 @@ export default async function Home() {
             <Card className="bg-zinc-900/80 backdrop-blur-md p-6 md:p-8 hover:border-blue-400/50 transition-all duration-300">
               <CardHeader className="p-0 mb-4">
                 <CardTitle className="text-lg md:text-xl font-bold">
-                  Why E-Cell IIT BHU?
+                  Why VC Scout?
                 </CardTitle>
               </CardHeader>
 
@@ -102,15 +99,15 @@ export default async function Home() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start gap-3">
                     <span className="text-blue-400 font-bold text-lg">•</span>
-                    <span>Learn from top founders & mentors</span>
+                    <span>Learn from real VC investors</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-400 font-bold text-lg">•</span>
-                    <span>Hands-on startup building experience</span>
+                    <span>Master deal flow & due diligence</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-400 font-bold text-lg">•</span>
-                    <span>Access to exclusive networking events</span>
+                    <span>Build a strong VC-ready profile</span>
                   </li>
                 </ul>
               </CardContent>
@@ -179,12 +176,12 @@ export default async function Home() {
                 </div>
 
                 {/* Partner Name */}
-                <h3 className="text-xl font-bold bg-gradient-to-r from-blue-300 via-cyan-400 to-yellow-300 bg-clip-text text-transparent group-hover:text-cyan-300 transition-all duration-300
-">
+                <h3
+                  className="text-xl font-bold bg-gradient-to-r from-blue-300 via-cyan-400 to-yellow-300 bg-clip-text text-transparent group-hover:text-cyan-300 transition-all duration-300
+"
+                >
                   {partner.name}
                 </h3>
-
-              
               </CardContent>
             </Card>
           ))}
