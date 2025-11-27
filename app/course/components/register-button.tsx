@@ -22,12 +22,12 @@ export default function RegisterButton({ status }: RegisterButtonProps) {
             </a>
         );
     }
->
 
-  // unregistered case - redirect to registration form
-  return (
-    <Button asChild size="lg" variant="cosmic">
-      <a href="/course/register">REGISTER </a>
-    </Button>
-  );
+    // unregistered case - redirect to registration form
+    // This is the default return case if status is "unregistered"
+    return (
+        <Button asChild size="lg" variant="cosmic">
+            <a href="/course/register">REGISTER </a>
+        </Button>
+    );
 }

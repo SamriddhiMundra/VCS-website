@@ -19,7 +19,7 @@ export default async function Page() {
         `${baseUrl}/api/user/${session.user.email}`,
         { 
           cache: "no-store",
-          signal: AbortSignal.timeout(5000) // 5 second timeout
+          signal: AbortSignal.timeout(10000) 
         }
       );
 
