@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { MdArrowOutward } from "react-icons/md";
 
 // const courses = [
 //   {
@@ -77,8 +78,10 @@ export default async function Home() {
 
               <div className="flex gap-4 flex-wrap pt-4">
                 {/* Primary gradient button */}
-                <Button asChild variant="default" size="lg" withArrow>
-                  <Link href="/auth">Join Now</Link>
+                <Button asChild variant="default" size="lg">
+                  <Link href="/auth">Join Now
+                  <MdArrowOutward />
+                   </Link>
                 </Button>
 
                 {/* Outline style button */}
