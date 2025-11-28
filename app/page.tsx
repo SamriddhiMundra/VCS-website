@@ -88,7 +88,7 @@ export default async function Home() {
               </div>
             </div>
 
-            <Card className="bg-zinc-900/80 backdrop-blur-md p-6 md:p-8 hover:border-blue-400/50 transition-all duration-300">
+            {/* <Card className="bg-zinc-900/80 backdrop-blur-md p-6 md:p-8 hover:border-blue-400/50 transition-all duration-300">
               <CardHeader className="p-0 mb-4">
                 <CardTitle className="text-lg md:text-xl font-bold">
                   Why VC Scout?
@@ -112,6 +112,87 @@ export default async function Home() {
                 </ul>
               </CardContent>
             </Card>
+
+              <Card className="bg-zinc-900/80 backdrop-blur-md p-6 md:p-8 hover:border-blue-400/50 transition-all duration-300">
+              <CardHeader className="p-0 mb-4">
+                <CardTitle className="text-lg md:text-xl font-bold">
+                  Why VC Scout?
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="p-0">
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-400 font-bold text-lg">•</span>
+                    <span>Learn from real VC investors</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-400 font-bold text-lg">•</span>
+                    <span>Master deal flow & due diligence</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-400 font-bold text-lg">•</span>
+                    <span>Build a strong VC-ready profile</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card> */}
+            <div className="space-y-6">
+              <Card className="bg-zinc-900/80 backdrop-blur-md p-6 md:p-8 hover:border-blue-400/50 transition-all duration-300">
+                <CardHeader className="p-0 mb-4">
+                  <CardTitle className="text-lg md:text-xl font-bold">
+                    Why VC Scout?
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="p-0">
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-400 font-bold text-lg">•</span>
+                      <span>Learn from real VC investors</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-400 font-bold text-lg">•</span>
+                      <span>Master deal flow & due diligence</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-400 font-bold text-lg">•</span>
+                      <span>Build a strong VC-ready profile</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-zinc-900/80 backdrop-blur-md p-6 md:p-8 hover:border-blue-400/50 transition-all duration-300">
+                <CardHeader className="p-0 mb-4">
+                  <CardTitle className="text-lg md:text-xl font-bold flex items-center gap-2">
+                    <span className="text-2xl">📅</span>
+                    Live Sessions
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="p-0">
+                  <ul className="space-y-3 text-gray-300 text-sm">
+                    <li>
+                      <span className="text-blue-400 font-semibold">29th Nov (Day 1):</span> Introductory session
+                    </li>
+                    <li>
+                      <span className="text-blue-400 font-semibold">4th Dec (Day 6):</span> Analysis + Due Diligence
+                    </li>
+                    <li>
+                      <span className="text-blue-400 font-semibold">9th Dec (Day 11):</span> Term Sheets
+                    </li>
+                    <li>
+                      <span className="text-blue-400 font-semibold">11th Dec (Day 13):</span> VC as a Career
+                    </li>
+                    <li>
+                      <span className="text-blue-400 font-semibold">13th Dec (Day 15):</span> Closing session (PS Release)
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+            </div>
           </section>
         </div>
       </section>
