@@ -82,6 +82,7 @@ export const module1Content: ModuleDetail[] = [
             <ul style="list-style-type: disc; margin-left: 2rem; padding-left: 0;">
                 <li>Venture Capital in 2 mins: <a href="https://youtu.be/JdrYoiQNB-c?si=eEoe8C-tthWQ6fxL" target="_blank" rel="noopener noreferrer" style="color:#FFD700; text-decoration: underline;">Youtube</a></li>
                 <li>First video <a href="https://youtu.be/a4aUX5u90oA?si=38Wu3jl9PeBIwqaH" target="_blank" rel="noopener noreferrer" style="color:#FFD700; text-decoration: underline;">Youtube</a></li>
+                <li>History of Venture Capital <a href="https://www.openvc.app/blog/history-of-venture-capital" target="_blank" rel="noopener noreferrer" style="color:#FFD700; text-decoration: underline;">Blog</a></li>
             </ul>
         `,
     },
