@@ -2,6 +2,7 @@ import { auth, supabase } from "@/auth";
 import ScoreEditor from "./ScoreEditor";
 import RoleToggle from "./RoleToggle";
 import DeleteUser from "./DeleteUser";
+import UploadScores from "./UploadScores";
 
 export default async function Page() {
     const session = await auth();
@@ -47,7 +48,8 @@ export default async function Page() {
     return (
         <div className="p-8">
             <h1 className="text-2xl font-bold mb-6">Admin: Users & Scores</h1>
-
+            <span><UploadScores />
+            </span>
             <div className="overflow-scroll">
                 <table className="min-w-full table-auto border-collapse">
                     <thead>
