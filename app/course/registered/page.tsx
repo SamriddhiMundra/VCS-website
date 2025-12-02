@@ -96,8 +96,8 @@ export default async function Page() {
                 : "bg-slate-800/50 text-slate-500 border-slate-700/50 cursor-not-allowed opacity-60"
               }`;
             
-            // Custom disabled styling for Module 2 buttons
-            const disabledButtonClasses = "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border bg-slate-800/50 text-slate-500 border-slate-700/50 cursor-not-allowed opacity-60";
+            // Custom styling for active quiz button (same as Module 1/3/5's blue link styling)
+            const activeQuizClasses = "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border bg-blue-500/10 text-blue-400 border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500/40 transition-all duration-200";
 
 
             return (
@@ -122,46 +122,29 @@ export default async function Page() {
                       </h2>
                       <div className="flex items-center gap-4 flex-wrap">
 
-                        {/* 🚀 START: Custom Logic for Module 2 (Both buttons disabled) */}
+                        {/* 🚀 START: Custom Logic for Module 2 (Single Active Quiz Button) */}
                         {isModuleTwo ? (
-                          <div className="flex items-center gap-3">
-                            
-                            {/* Problem Statement Button (DISABLED) */}
-                            <button disabled className={disabledButtonClasses}>
-                              <span>Problem Statement</span>
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M9 5l7 7-7 7"
-                                />
-                              </svg>
-                            </button>
-                            
-                            {/* Submit Assignment Button (DISABLED) */}
-                            <button disabled className={disabledButtonClasses}>
-                              <span>Submit Assignment</span>
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M9 5l7 7-7 7"
-                                />
-                              </svg>
-                            </button>
-                          </div>
+                          <a
+                            href="https://forms.gle/sgyN5ZHgoWd4WK9K7" // New Google Forms link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={activeQuizClasses} // Use the standard active quiz styling
+                          >
+                            <span>Attempt Quiz</span>
+                            <svg
+                              className="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </a>
 
                         ) : (
                           /* * 🚀 END: Custom Logic for Module 2 
