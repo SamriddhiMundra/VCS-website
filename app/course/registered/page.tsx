@@ -83,9 +83,9 @@ export default async function Page() {
 
             // Base checks for the standard assignment/quiz button
             const hasLink = !!w.submission_link;
-            const isModuleOneOrThreeOrFive = [1, 3, 5].includes(w.week);
+            const isModuleQuiz = [1, 3, 5].includes(w.week);
 
-            const buttonLabel = isModuleOneOrThreeOrFive
+            const buttonLabel = isModuleQuiz
               ? "Attempt Quiz"
               : "Submit Assignment";
 
@@ -96,8 +96,23 @@ export default async function Page() {
                 : "bg-slate-800/50 text-slate-500 border-slate-700/50 cursor-not-allowed opacity-60"
               }`;
             
-            // Custom styling for active quiz button (same as Module 1/3/5's blue link styling)
+            // Custom styling for active quiz button (used for Modules 1, 3, 5)
             const activeQuizClasses = "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border bg-blue-500/10 text-blue-400 border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500/40 transition-all duration-200";
+
+            // 🎯 Define specific quiz/problem statement links here
+            const MODULE_2_QUIZ_LINK = "https://forms.gle/sgyN5ZHgoWd4WK9K7"; 
+            const MODULE_3_QUIZ_LINK = "https://forms.gle/YsEkrcFPcTkyFHdB9"; 
+            
+            
+            let quizLink = w.submission_link;
+            if (w.week === 2) {
+                
+                quizLink = MODULE_2_QUIZ_LINK;
+            } else if (w.week === 3) {
+                
+                quizLink = MODULE_3_QUIZ_LINK;
+            } 
+            
 
 
             return (
@@ -122,33 +137,32 @@ export default async function Page() {
                       </h2>
                       <div className="flex items-center gap-4 flex-wrap">
 
-                        {/* 🚀 START: Custom Logic for Module 2 (Single Active Quiz Button) */}
-                        {isModuleTwo ? (
-                          <a
-                            href="https://forms.gle/sgyN5ZHgoWd4WK9K7" // New Google Forms link
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={activeQuizClasses} // Use the standard active quiz styling
-                          >
-                            <span>Attempt Quiz</span>
-                            <svg
-                              className="w-4 h-4"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
+                        {/* 🚀 START: Custom Logic for Module 2 and 3 Quizzes */}
+                        {(w.week === 2 || w.week === 3) ? (
+                            <a
+                              href={w.week === 3 ? MODULE_3_QUIZ_LINK : MODULE_2_QUIZ_LINK}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={activeQuizClasses}
                             >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 5l7 7-7 7"
-                              />
-                            </svg>
-                          </a>
-
+                              <span>Attempt Quiz</span>
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M9 5l7 7-7 7"
+                                />
+                              </svg>
+                            </a>
                         ) : (
-                          /* * 🚀 END: Custom Logic for Module 2 
-                           * START: Standard Logic for all other Modules (1, 3, 4, 5...) 
+                          /* * 🚀 END: Custom Logic for Modules 2 & 3
+                           * START: Standard Logic for all other Modules (1, 4, 5...) 
                            */
                           <div className="inline-flex items-center gap-3">
                             {hasLink ? (
@@ -193,7 +207,7 @@ export default async function Page() {
                             )}
 
                             {/* Coming Soon Badge: shown only when link is missing and it's not a quiz module */}
-                            {!hasLink && !isModuleOneOrThreeOrFive && (
+                            {!hasLink && !isModuleQuiz && (
                               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-orange-500/20 to-yellow-500/20 text-orange-400 border border-orange-500/30 animate-pulse">
                                 <svg
                                   className="w-3 h-3"
